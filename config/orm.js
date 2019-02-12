@@ -12,7 +12,7 @@ var orm = {
     },
 
     insertOne: function (tableInput, cb) {
-        connection.query("INSERT INTO " + tableInput + " (burger_name) VALUES (" + vals + ");" , function(err, result) {
+        connection.query("INSERT INTO " + tableInput + " (burger_name) VALUES ('" + vals + "');" , function(err, result) {
             if (err) {
                 throw err;
             }

@@ -5,6 +5,7 @@
 <ul>
     {{#each burger}}
         {{#unless this.devoured}}
+            <button type="submit" class='eatThis' data-id="{{id}}" data-devoured="{{devoured}}"> {{this.burger_name}}</button>
             {{> available}}
         {{/unless}}
     {{/each}}
