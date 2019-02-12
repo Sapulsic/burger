@@ -6,11 +6,18 @@ var burger = {
             cb(res);
         });
     },
-    insertOne: function(name, cb) {
+
+    insertOne: function (cols, vals, cb) {
         orm.selectAll("burgers", name, cb);
+        cb(res);
+
     },
-    updateOne: function(id, cb) {
-        orm.updateOne("burgers", id, cb);
+    
+    updateOne: function (objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
+            cb(res);
+        });
+
     }
 };
 

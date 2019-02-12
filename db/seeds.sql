@@ -1,4 +1,4 @@
-INSERT INTO burgers
+INSERT INTO burgersNew
     (burger_name)
 VALUES
     ('Shroom');
